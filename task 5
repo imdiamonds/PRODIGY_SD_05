@@ -12,9 +12,10 @@ def scrape_product_information(url):
         soup = BeautifulSoup(response.text, 'html.parser')
 
         # Find product information (replace these with actual HTML tags of the website)
-        product_names = soup.find_all('div', class_='product-name')
-        product_prices = soup.find_all('span', class_='product-price')
-        product_ratings = soup.find_all('div', class_='product-rating')
+        product_names = soup.find_all('h3')  # Update this with the appropriate HTML tag
+        product_prices = soup.find_all('p', class_='price_color')  # Update this with the appropriate HTML tag
+        product_ratings = soup.find_all('p', class_='star-rating')  # Update this with the appropriate HTML tag
+
 
         # Create a list to store the data
         data = []
@@ -42,7 +43,7 @@ def save_to_csv(data, output_file='product_data.csv'):
 
 if __name__ == "__main__":
     # Replace this URL with the actual URL of the e-commerce website you want to scrape
-    e_commerce_url = 'https://example.com/products'
+    e_commerce_url = 'http://books.toscrape.com'
 
     # Scrape product information
     scraped_data = scrape_product_information(e_commerce_url)
