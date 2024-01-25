@@ -20,6 +20,7 @@ Replace the e_commerce_url variable with the actual URL of the e-commerce websit
 python
 Copy code
 e_commerce_url = 'https://www.example-ecommerce-site.com/'
+
 HTML Tags for Product Information:
 Update the HTML tags used in the find_all functions to match the structure of the target website. Inspect the HTML of the website and identify the tags that contain the product names, prices, and ratings. For instance:
 
