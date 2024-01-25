@@ -24,8 +24,7 @@ HTML Tags for Product Information:
 Update the HTML tags used in the find_all functions to match the structure of the target website. Inspect the HTML of the website and identify the tags that contain the product names, prices, and ratings. For instance:
 
 python
-Copy code
-# Find product information (replace these with actual HTML tags of the website)
+Copy code # Find product information (replace these with actual HTML tags of the website)
 product_names = soup.find_all('h2', class_='product-title')
 product_prices = soup.find_all('span', class_='price')
 product_ratings = soup.find_all('div', class_='star-rating')
